@@ -51,6 +51,7 @@ bool NfcManager::transceive(APDU& apdu){
 
     int res = nfc_initiator_transceive_bytes(mNfcDevice, capdu, capdulen, rapdu, rapdulen, 700);
     if(res<2){
+        ::std::cout<<"Error in transceive"<<::std::endl;
         return false;
     }
 
