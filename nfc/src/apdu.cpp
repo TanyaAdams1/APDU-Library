@@ -165,7 +165,7 @@ std::vector<uint8_t> APDU::buildResp() const{
     std::vector<uint8_t> apdu;
     apdu.push_back(mSW1);
     apdu.push_back(mSW2);
-    apdu.insert(apdu.end(), mResp.begin(), mResp.end());
+    apdu.insert(apdu.begin(), mResp.begin(), mResp.end());
     return apdu;
 }
 
